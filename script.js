@@ -4,14 +4,12 @@ const tempArr = [1, 2, 3, 4];
 new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(tempArr);
-  }, 3000);
+  }, 1000);
 }) 
 .then((arr) => {
   // Filter out odd numbers
   const evenArr = arr.filter((num) => num % 2 === 0);
-  setTimeout(() => {
-	  outputDiv.innerText = evenArr.join(", ");
-  }, 1000)
+  outputDiv.innerText = evenArr.join(", ");
   return evenArr;
 })
 .then((evenArr) => {
