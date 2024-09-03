@@ -9,7 +9,7 @@ new Promise((resolve, reject) => {
 .then((arr) => {
   // Filter out odd numbers
   const evenArr = arr.filter((num) => num % 2 === 0);
-  setTimeOut(() => {
+  setTimeout(() => {
 	  outputDiv.innerText = evenArr.join(", ");
   }, 1000)
   return evenArr;
@@ -21,4 +21,4 @@ new Promise((resolve, reject) => {
     outputDiv.innerText = finalArr.join(", ");
   }, 2000);
   return finalArr;
-});
+}).catch((e) => console.log(e));
