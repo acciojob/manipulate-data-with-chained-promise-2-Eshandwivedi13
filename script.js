@@ -5,7 +5,7 @@ const tempArr = [1, 2, 3, 4];
 new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(tempArr); 
-  }, 1000);
+  }, 3000);
 }) 
 .then((arr) => {
   // Filter out odd numbers
