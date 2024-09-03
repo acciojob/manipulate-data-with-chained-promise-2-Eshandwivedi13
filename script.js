@@ -1,11 +1,12 @@
 //your JS code here. If required.
 const outputDiv = document.getElementById('output');
 
-new Promise((res, rej) => {
-	setTimeout(() => {
-	    resolve([1, 2, 3, 4]);
-	 }, 3000);
-}).then((arr) => {
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve([1, 2, 3, 4]);
+  }, 3000);
+})
+.then((arr) => {
   // Filter out odd numbers
   const evenArr = arr.filter((num) => num % 2 === 0);
   outputDiv.innerText = evenArr.join(", ");
